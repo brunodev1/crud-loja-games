@@ -39,7 +39,11 @@ public class ProdutoModel {
 	@ManyToOne
 	@JsonIgnoreProperties("produtoModel")
 	private CategoriaModel categoriaModel;
-
+	
+	@ManyToOne
+	@JsonIgnoreProperties("produtoModel")
+	private UsuarioModel usuarioModel;
+	
 	public Long getId() {
 		return id;
 	}
@@ -87,5 +91,14 @@ public class ProdutoModel {
 	public void setCategoriaModel(CategoriaModel categoriaModel) {
 		this.categoriaModel = categoriaModel;
 	}
+
+	public UsuarioModel getUsuarioModel() {
+		return usuarioModel;
+	}
+
+	public void setUsuarioModel(UsuarioModel usuarioModel) {
+		this.usuarioModel = usuarioModel;
+	}
+	
 	
 }
